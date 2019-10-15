@@ -34,8 +34,8 @@ public class parsejsoncls {
 	public static void main(String[] args) throws IOException, JSONException {
 		String API_KEY = "";
 		JSONObject json = readJsonFromUrl("https://api.themoviedb.org/3/search/movie?/page=2/&query=q&api_key=" 
-		+ API_KEY +
-		"&language=en-US");
+		                                  + API_KEY +
+		                                  "&language=en-US");
 		JSONArray list = json.getJSONArray("results");
 		for (int i = 0; i < list.length(); i++) {
 			JSONObject elem = list.getJSONObject(i);
